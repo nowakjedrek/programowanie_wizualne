@@ -22,18 +22,37 @@ namespace WpfApp1
 
 	public partial class DispatcherTimerSample : Window
 	{
+		DispatcherTimer timer = new DispatcherTimer(); 
 		public DispatcherTimerSample()
 		{
+
 			
-			DispatcherTimer timer = new DispatcherTimer();
 			timer.Interval = TimeSpan.FromMilliseconds(1);
 			timer.Tick += timer_Tick;
 			timer.Start();
+			
+
+
+
+
 		}
 
 		void timer_Tick(object sender, EventArgs e)
 		{
 			Timer.Content = DateTime.Now.ToLongTimeString();
 		}
+
+		private void Button_Click(object sender, RoutedEventArgs e)
+		{
+			Window1 subwindow = new Window1();
+			subwindow.Show();
+		}
+		private void startbtn_Click(object sender, RoutedEventArgs e)
+		{
+			timer.Start();
+
+		} 
+
+
 	}
 }

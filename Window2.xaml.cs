@@ -10,33 +10,24 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace samochód
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Logika interakcji dla klasy Window2.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Window2 : Window
     {
-        public MainWindow()
+        public Window2()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Click_powrot2(object sender, RoutedEventArgs e)
         {
-            Window1 subwindow = new Window1();
-            subwindow.Show();
-            
-        }
+            this.Close();
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            
-            Window2 subwindow2 = new Window2();
-            subwindow2.Show();
         }
     }
 }

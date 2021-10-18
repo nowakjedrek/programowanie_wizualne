@@ -1,0 +1,23 @@
+﻿<Window x:Class="samochód.Window2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:samochód"
+        mc:Ignorable="d"
+        Title="Wybór silnika" Height="450" Width="800">
+    <Grid>
+        <RadioButton Content="Benzyna" HorizontalAlignment="Left" Margin="30,40,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="Diesel" HorizontalAlignment="Left" Margin="30,70,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="Gaz" HorizontalAlignment="Left" Margin="30,100,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="Hybryda" HorizontalAlignment="Left" Margin="30,130,0,0" VerticalAlignment="Top"/>
+        <ComboBox HorizontalAlignment="Left" Margin="150,271,0,0" VerticalAlignment="Top" Width="120">
+            <Button Content="100KM"/>
+            <Button Content="150KM"/>
+            <Button Content="200KM"/>
+        </ComboBox>
+        <Button Content="powrót" HorizontalAlignment="Left" Margin="566,271,0,0" VerticalAlignment="Top" Click="Button_Click_powrot2"/>
+
+
+    </Grid>
+</Window>

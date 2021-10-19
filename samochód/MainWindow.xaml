@@ -1,0 +1,16 @@
+﻿<Window x:Class="samochód.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:samochód"
+        mc:Ignorable="d"
+        Title="Wybór samochodu" Height="450" Width="800">
+    <Grid>
+        <Button Content="Marka" HorizontalAlignment="Left" Margin="96,217,0,0" VerticalAlignment="Top" Height="53" Width="140" Click="Button_Click_marka"/>
+        <Button Content="Silnik" HorizontalAlignment="Center" Margin="0,217,0,0" VerticalAlignment="Top" Height="53" Width="140" Click="Button_Click_silnik"/>
+        <Label x:Name="Cena" Content="" HorizontalAlignment="Left" Margin="621,217,0,0" VerticalAlignment="Top" Height="53" Width="140"/>
+
+
+    </Grid>
+</Window>

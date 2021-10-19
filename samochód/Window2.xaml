@@ -1,0 +1,27 @@
+﻿<Window x:Class="samochód.Window2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:samochód"
+        mc:Ignorable="d"
+         Title="Wybór silnika" Height="450" Width="800">
+    <Grid>
+        <RadioButton Content="Benzyna" HorizontalAlignment="Left" Margin="30,40,0,0" VerticalAlignment="Top" Checked="Benzyna_checked" Unchecked="Benzyna_Unchecked"/>
+        <RadioButton Content="Diesel" HorizontalAlignment="Left" Margin="30,70,0,0" VerticalAlignment="Top" Checked="Diesel_checked" Unchecked="Diesel_Unchecked"/>
+        <RadioButton Content="Gaz" HorizontalAlignment="Left" Margin="30,100,0,0" VerticalAlignment="Top" Checked="Gaz_checked" Unchecked="Gaz_Unchecked"/>
+        <RadioButton Content="Hybryda" HorizontalAlignment="Left" Margin="30,130,0,0" VerticalAlignment="Top" Checked="Hybryda_Checked" Unchecked="Hybryda_Unchecked"/>
+        <ComboBox  HorizontalAlignment="Left" Margin="150,271,0,0" VerticalAlignment="Top" Width="120">
+            <Button Content="1.6l" Click="Button_16l"/>
+            <Button Content="1.9l" Click="Button_19l"/>
+            <Button Content="2.5l" Click="Button_25l"/>
+        </ComboBox>
+        
+        <Button Content="powrót" HorizontalAlignment="Left" Margin="566,271,0,0" VerticalAlignment="Top" Click="Button_Click_powrot2" Height="50" Width="100"/>
+        <Label x:Name="Cena" Content="" HorizontalAlignment="Left" Margin="621,217,0,0" VerticalAlignment="Top" Height="53" Width="140"/>
+        <Label Content="pojemnosc silnika" HorizontalAlignment="Left" Margin="155,240,0,0" VerticalAlignment="Top"/>
+        <Button Content="Reset" HorizontalAlignment="Left" Margin="550,330,0,0" VerticalAlignment="Top" Width="120" Click="Button_Reset"/>
+
+
+    </Grid>
+</Window>

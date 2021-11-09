@@ -7,12 +7,15 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button x:Name="Odbicie" Content="A" HorizontalAlignment="Left" Margin="75,60,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="Odbicie" Content="A" HorizontalAlignment="Left" Margin="75,60,0,0" VerticalAlignment="Top" Width="75" Click="Odbicie_Click"/>
         <Button x:Name="Obrot" Content="B" HorizontalAlignment="Left" Margin="75,100,0,0" VerticalAlignment="Top" Width="75" Click="Obrot_Click"/>
-        <Button x:Name="Zielony" Content="C" HorizontalAlignment="Left" Margin="75,140,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="Negatyw" Content="D" HorizontalAlignment="Left" Margin="75,180,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="Zielony" Content="C" HorizontalAlignment="Left" Margin="75,140,0,0" VerticalAlignment="Top" Width="75" Click="Zielony_Click"/>
+        <Button x:Name="Negatyw" Content="D" HorizontalAlignment="Left" Margin="75,180,0,0" VerticalAlignment="Top" Width="75" Click="Negatyw_Click"/>
         <Button x:Name="Wczytaj" Content="Wczytaj" HorizontalAlignment="Left" Margin="75,20,0,0" VerticalAlignment="Top" Width="75" Click="Wczytaj_Click"/>
-        <Image x:Name="Obraz" Width="150" Margin="5" Grid.Column="0" Grid.Row="1" />
+        <Image x:Name="Obraz" Width="150" Height="150" Margin="5"/>
+        <Button x:Name="Usun" Content="Wyczyść" HorizontalAlignment="Left" Margin="75,220,0,0" VerticalAlignment="Top" Width="75" Click="Wyczysc_Click"/>
+
+
 
 
 

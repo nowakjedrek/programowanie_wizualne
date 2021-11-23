@@ -1,0 +1,38 @@
+﻿<Window x:Class="lab6.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab6"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Closing="Window_Closing">
+   
+
+    <Grid RenderTransformOrigin="0.483,0.493">
+        <ListView x:Name="List_View" HorizontalAlignment="Left" Height="246" Margin="100,89,0,0" VerticalAlignment="Top" Width="450" >
+            <ListView.View>
+                <GridView>
+
+                    <GridViewColumn x:Name="Name_gv" Header="Name" DisplayMemberBinding="{Binding Path=Name}" Width="150" />
+
+                    <GridViewColumn x:Name="ID_gv" Header="ID" DisplayMemberBinding="{Binding Path=ID}" Width="150" />
+                    <GridViewColumn x:Name="Count_gv" Header="Count" DisplayMemberBinding="{Binding Path=Count}" Width="150"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="Zapis" HorizontalAlignment="Left" Margin="100,360,0,0" VerticalAlignment="Top" Width="75" Click="Zapis_Click"/>
+        <Button Content="Odczyt" HorizontalAlignment="Left" Margin="500,360,0,0" VerticalAlignment="Top" Width="75" Click="Odczyt_Click"/>
+        <Button Content="Dodaj" HorizontalAlignment="Left" Margin="300,360,0,0" VerticalAlignment="Top" Width="75" Click="Dodaj_Click"/>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="600,170,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Count" HorizontalAlignment="Left" Margin="600,270,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Wyczyść" HorizontalAlignment="Left" Margin="600,100,0,0" VerticalAlignment="Top" Width="75" Click="Wyczysc_Click"/>
+        <TextBox x:Name="Name_TextBox" HorizontalAlignment="Left" Height="23" Margin="600,200,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Count_TextBox" HorizontalAlignment="Left" Height="23" Margin="600,300,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Wyszukaj" HorizontalAlignment="Left" Height="23" Margin="600,380,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Szukaj" HorizontalAlignment="Left" Margin="600,350,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Wyszukaj" HorizontalAlignment="Left" Margin="600,50,0,0" VerticalAlignment="Top" Width="75" Click="Wyszukaj_Click"/>
+        
+    </Grid>
+   
+</Window>
+

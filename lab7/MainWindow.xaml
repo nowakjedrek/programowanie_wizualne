@@ -28,8 +28,8 @@
         </ListView>
         <Button x:Name="Dodaj_czytelnika" Content="Dodaj czytelnika" HorizontalAlignment="Left" Margin="70,380,0,0" VerticalAlignment="Top" Width="100" Click="Dodaj_czytelnika_Click"/>
         <Button x:Name="Dodaj_ksiazke" Content="Dodaj książkę" HorizontalAlignment="Right" Margin="0,380,70,0" VerticalAlignment="Top" Width="100" Click="Dodaj_ksiazke_Click"/>
-        <Button x:Name="Wypozycz" Content="Wypożycz" HorizontalAlignment="Left" Margin="310,100,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.016,0.387"/>
-        <Button x:Name="Oddaj" Content="Oddaj" HorizontalAlignment="Left" Margin="310,150,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.016,0.387"/>
+        <Button x:Name="Wypozycz" Content="Wypożycz" HorizontalAlignment="Left" Margin="310,100,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.016,0.387" Click="Wypozycz_Click"/>
+        <Button x:Name="Oddaj" Content="Oddaj" HorizontalAlignment="Left" Margin="310,150,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.016,0.387" Click="Oddaj_Click"/>
 
 
     </Grid>

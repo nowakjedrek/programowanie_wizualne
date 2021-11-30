@@ -1,6 +1,7 @@
 ﻿using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -23,14 +24,14 @@ namespace lab7
     public partial class MainWindow : Window
     {
         public int numer_id;
-        class Czytelnik
+       public class Czytelnik
         {
             public string Imie { get; set; }
             public string Nazwisko { get; set; }
             public int ID { get; set; }
 
         }
-        class Ksiazka
+        public class Ksiazka
         {
             public string Tytul { get; set; }
             public string Autor { get; set; }
@@ -38,10 +39,20 @@ namespace lab7
             public string Wyp { get; set; }
 
         }
+        public IList<Ksiazka> Ksiazki;
+        public IList<Czytelnik> Czytelnicy;
+        public IList<Ksiazka> Ksiazki_dostepne;
+        public IList<Ksiazka> Ksiazki_wypozyczone;
         bool data_saved;
+        
+        
         public MainWindow()
         {
             InitializeComponent();
+            
+            
+            
+         
         }
 
         private void Dodaj_czytelnika_Click(object sender, RoutedEventArgs e)
@@ -50,6 +61,8 @@ namespace lab7
             fileDialog.ShowDialog();
             string CSV_InputPath = fileDialog.FileName;
             Lv_czytelnik.Items.Clear();
+            
+            
 
             string[] lines = File.ReadAllLines(CSV_InputPath);
             Random rand = new Random();
@@ -59,6 +72,11 @@ namespace lab7
             {
                 string[] data = line.Split(',');
                 Lv_czytelnik.Items.Add(new Czytelnik() { Imie = data[0], Nazwisko = data[1], ID = rand.Next(1, 50) });
+                Czytelnik czyt = new Czytelnik();
+                czyt.Imie = data[0];
+                czyt.Nazwisko = data[1];
+
+                Czytelnicy.Add(czyt); 
             }
         }
 
@@ -76,7 +94,13 @@ namespace lab7
             foreach (string line in lines)
             {
                 string[] data = line.Split(',');
-                Lv_czytelnik.Items.Add(new Ksiazka() { Tytul = data[0], Autor = data[1], ID_k = rand.Next(51, 100) });
+                Lv_ksiazka.Items.Add(new Ksiazka() { Tytul = data[0], Autor = data[1], ID_k = rand.Next(51, 100), Wyp = data[3] });
+                Ksiazka ks = new Ksiazka();
+                ks.Tytul = data[0];
+                ks.Autor = data[1];
+                ks.Wyp = data[3];
+                
+               Ksiazki.Add(ks);
             }
         }
 
@@ -118,6 +142,29 @@ namespace lab7
                         }
                     }
                 }
+            }
+        }
+
+        private void Wypozycz_Click(object sender, RoutedEventArgs e)
+        {
+            foreach (Ksiazka egz in Ksiazki)
+            {
+                if (egz.Wyp == "Nie")
+                {
+                    Ksiazki_dostepne.Add(egz);
+                }
+            }
+
+            
+
+        }
+
+        private void Oddaj_Click(object sender, RoutedEventArgs e)
+        {
+            foreach (Ksiazka egz in Ksiazki)
+            {
+                if (egz.Wyp == "Tak") {
+                    Ksiazki_wypozyczone.Add(egz); }
             }
         }
     }

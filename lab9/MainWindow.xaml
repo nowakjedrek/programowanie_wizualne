@@ -1,0 +1,109 @@
+﻿<Window x:Class="lab9.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab9"
+        mc:Ignorable="d"
+        
+    Title="MainWindow" Height="700" Width="900" WindowStartupLocation="CenterScreen" Closing="ClosingWindow">
+    <ScrollViewer HorizontalScrollBarVisibility="Visible" Margin="0,0,0.2,-77.6">
+        <Grid Margin="30" Name="ChildGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Center" FontSize="16" HorizontalAlignment="Center" Width="299">Karta Pracy Dyplomowej Licencjackiej</Label>
+            <TextBlock Grid.Row="2"></TextBlock>
+            <TextBlock Grid.Row="3" Grid.Column="0" Width="Auto" Height="15" Background="Black"/>
+            <TextBlock Grid.Row="3" Grid.Column="1" Height="15" Background="Gray" Foreground="White" TextAlignment="Center" Margin="0,0,10,0"></TextBlock>
+            <TextBlock Grid.Row="3" Grid.Column="2" Width="Auto" Height="15" Background="Black"/>
+            <TextBlock Grid.Row="3" Grid.Column="3" Height="15" Background="Gray" Foreground="White" TextAlignment="Center" Margin="0,0,10,0"></TextBlock>
+            <Label Grid.Row="4" HorizontalAlignment="Center" >Uczelnia:</Label>
+            <TextBox Name="Uczelnia_text" Text="{Binding Path=Uczelnia}" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Height="Auto" BorderThickness="0,0,0,1"></TextBox>
+            <Label Grid.Row="4" Grid.Column="2" HorizontalAlignment="Center" >Profil studiów:</Label>
+            <TextBox Name="Profil_text" Text="{Binding Path=Profil}" Grid.Column="4"  HorizontalAlignment="Center" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Height="Auto" BorderThickness="0,0,0,1"/>
+            <Label Grid.Row="5" HorizontalAlignment="Center" >Kierunek:</Label>
+            <TextBox Name="Kierunek_text" Text="{Binding Path=Kierunek}" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Height="Auto" BorderThickness="0,0,0,1"/>
+            <Label Grid.Row="5" Grid.Column="2" HorizontalAlignment="Center" >Forma studiów:</Label>
+            <TextBox Name="FormaStudiow_text" Text="{Binding Path=FormaStudiow}" Grid.Row="5" Grid.Column="4" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Height="Auto" BorderThickness="0,0,0,1"/>
+            <Label Grid.Row="6" HorizontalAlignment="Center" >Studia w zakresie:</Label>
+            <TextBox Name="Zakres_text" Text="{Binding Path=Zakres}" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Height="Auto" BorderThickness="0,0,0,1"/>
+            <Label Grid.Row="6" Grid.Column="2" HorizontalAlignment="Center" >Poziom studiów:</Label>
+            <TextBox Name="Poziom_text" Text="{Binding Path=Poziom}" Grid.Row="6" Grid.Column="4" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Height="Auto" BorderThickness="0,0,0,1"/>
+
+            <TextBlock Grid.Row="7" Grid.ColumnSpan="4" TextWrapping="Wrap" Width="700" HorizontalAlignment="Center" FontSize="10" >
+            Zobowiązuję/zobowiązujemy się samodzielnie wykonać pracę w zakresie wyspecyfikowanym niżej. Wszystkie elementy (m.in. rysunki, tabele, cytaty, programy
+            komputerowe, urządzenia itp.), które zostaną wykorzystane w pracy, a nie będą mojego/naszego autorstwa będą w odpowiedni sposób zaznaczone i będzie podane źródło ich pochodzenia.
+            Jeżeli w wyniku realizacji pracy zostanie dokonany wynalazek, wzór użytkowy, wzór przemysłowy, znak towarowy, prawa do rozwiązań przysługiwać będą Politechnice
+            Poznańskiej. Prawo to zostanie uregulowane odrębną umową.
+            Oświadczam, iż o wyniku prac wskazanych powyżej, a także o innych, w tym tych, które mogą być przedmiotem tajemnicy Politechniki Poznańskiej, niezwłocznie
+            powiadomię promotora pracy.
+            Zobowiązuję się ponadto do zachowania w tajemnicy wszystkich informacji technicznych, technologicznych, organizacyjnych, uzyskanych w Politechnice Poznańskiej
+            w okresie od daty rozpoczęcia realizacji prac do 5 lat od daty zakończenia wykonania prac.
+            </TextBlock>
+            <TextBlock Grid.Row="8" Grid.Column="0" Width="Auto" Height="15" Background="Black"/>
+            <TextBlock Grid.Row="8" Grid.Column="1" Height="15" Background="Gray" Foreground="Black" TextAlignment="Center" >Imię i Nazwisko:</TextBlock>
+            <TextBlock Grid.Row="8" Grid.Column="2" Height="15" Background="Gray" Foreground="Black" TextAlignment="Center" >Nr albumu:</TextBlock>
+            <TextBlock Grid.Row="8" Grid.Column="3" Height="15" Background="Gray" Foreground="Black" TextAlignment="Center" >Data i podpis:</TextBlock>
+            <Label Grid.Row="9" HorizontalAlignment="Center" >Student:</Label>
+            <TextBox Name="Student_text" Text="{Binding Path=Student}" Grid.Row="9" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap"  VerticalAlignment="Center" Width="120" Height="Auto" BorderThickness="0,0,0,1"/>
+            <TextBox Name="Indeks_text" Text="{Binding Path=Indeks}" Grid.Row="9" Grid.Column="2" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Height="Auto" BorderThickness="0,0,0,1"/>
+            <TextBox Name="DataiPodpis_text" Text="{Binding Path=DataiPodpis}" Grid.Row="9" Grid.Column="3" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Height="Auto" BorderThickness="0,0,0,1"/>
+            <TextBlock Grid.Row="10" Grid.Column="0" Width="Auto" Height="15" Background="Black"/>
+            <TextBlock Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="3" Height="15" Background="Gray" Foreground="White" TextAlignment="Center" ></TextBlock>
+            <Label Grid.Row="11" HorizontalAlignment="Center" >Tytuł pracy:</Label>
+            <TextBox Name="Tytul_text" Text="{Binding Path=Tytul}" Grid.Row="11" Grid.ColumnSpan="3" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Width="485" Height="Auto" BorderThickness="0,0,0,1" Grid.Column="1" Margin="43,0,0,0"/>
+            <Label Grid.Row="12" HorizontalAlignment="Center" >Wersja angielska tytułu:</Label>
+            <TextBox Name="Angielski_text" Text="{Binding Path=Angielski}" Grid.Row="12" Grid.ColumnSpan="3" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Width="485" Height="Auto" BorderThickness="0,0,0,1" Grid.Column="1" Margin="43,0,0,0"/>
+            <Label Grid.Row="13" HorizontalAlignment="Center" >Dane wejściowe:</Label>
+            <TextBox Name="Input_text" Text="{Binding Path=Input}" Grid.Row="13" Grid.ColumnSpan="3" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Width="485" Height="Auto" BorderThickness="0,0,0,1" Grid.Column="1" Margin="43,0,0,0"/>
+            <Label Grid.Row="14" HorizontalAlignment="Center" >Zakres pracy:</Label>
+            <TextBox Name="ZakresPracy_text" Text="{Binding Path=ZakresPracy}" Grid.Row="14" Grid.ColumnSpan="3" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Width="485" Height="Auto" BorderThickness="0,0,0,1" Grid.Column="1" Margin="43,0,0,0"/>
+            <Label Grid.Row="15" HorizontalAlignment="Center" >Termin oddania pracy:</Label>
+            <TextBox Name="Termin_text" Text="{Binding Path=Termin}" Grid.Row="15" Grid.ColumnSpan="3" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Width="485" Height="Auto" BorderThickness="0,0,0,1" Grid.Column="1" Margin="43,0,0,0"/>
+            <Label Grid.Row="16" HorizontalAlignment="Center" >Promotor:</Label>
+            <TextBox Name="Promotor_text" Text="{Binding Path=Promotor}" Grid.Row="16" Grid.ColumnSpan="3" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Width="485" Height="Auto" BorderThickness="0,0,0,1" Grid.Column="1" Margin="43,0,0,0"/>
+            <Label Grid.Row="17" HorizontalAlignment="Center" >Jednostka organizacyjna promotora:</Label>
+            <TextBox Name="JednostkaPromotora_text" Text="{Binding Path=JednostkaPromotora}" Grid.Row="17" Grid.ColumnSpan="3" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Width="485" Height="Auto" BorderThickness="0,0,0,1" Grid.Column="1" Margin="43,0,0,0"/>
+            <TextBlock Grid.Row="18"></TextBlock>
+            <TextBlock Grid.Row="19"></TextBlock>
+            <TextBox Name="PodpisKierownika_text" Text="{Binding Path=PodpisKierownika}" Grid.Row="20" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Height="Auto" BorderThickness="0,0,0,1" TextAlignment="Center"/>
+            <TextBox Name="DataPodpisu_text" Text="{Binding Path=DataPodpisu}" Grid.Row="20" Grid.Column="2" HorizontalAlignment="Center" TextWrapping="Wrap"  VerticalAlignment="Center" Width="120" Height="Auto" BorderThickness="0,0,0,1" TextAlignment="Center"/>
+            <TextBox Name="PodpisDziekana_text" Text="{Binding Path=PodpisDziekana}" Grid.Row="20" Grid.Column="3" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Height="Auto" BorderThickness="0,0,0,1" TextAlignment="Center"/>
+            <Label Grid.Row="21" Grid.Column="0" Grid.ColumnSpan="2"  HorizontalAlignment="Center" FontSize="10" >Podpis dyrektora/kierownika jednostki organizacyjnej promotora</Label>
+            <Label  Grid.Row="21" Grid.Column="2" HorizontalAlignment="Center" FontSize="10" >Data</Label>
+            <Label Grid.Row="21" Grid.Column="3" HorizontalAlignment="Center" FontSize="10" >Podpis dziekana</Label>
+
+        </Grid>
+    </ScrollViewer>
+    
+</Window>
